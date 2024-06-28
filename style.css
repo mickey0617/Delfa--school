@@ -1,0 +1,1620 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#Acceuil {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#Acceuil .en_tete {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+#Acceuil header .en_tete .logo,
+#Acceuil header .en_tete .lien {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#Acceuil header .en_tete .logo img {
+    width: 100px;
+    cursor: pointer;
+}
+
+#Acceuil header .en_tete nav {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+#Acceuil header .en_tete nav a {
+    text-decoration: none;
+    margin: 10px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.829);
+    padding: 5px;
+    transition: all 2s ease;
+}
+
+#Acceuil header .en_tete nav a:hover,
+#Acceuil header .en_tete .lien a:hover {
+    border-bottom: 1px solid black;
+}
+
+#Acceuil header .en_tete .lien a {
+    margin: 12px;
+    padding: 10px;
+    transition: all 2s ease;
+}
+
+#Acceuil header .en_tete .lien a img {
+    width: 30px;
+}
+
+/* text */
+#Acceuil .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Acceuil .text h1 {
+    cursor: pointer;
+    background: linear-gradient(120deg, #5d5fc4, 40%, #d68686c4 60%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-style: italic;
+    letter-spacing: 10px;
+    margin: 5px;
+}
+
+#Acceuil .text p,
+#Acceuil .text2 {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+#Acceuil .btn {
+    margin-top: 30px;
+}
+
+#Acceuil .btn a {
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    text-decoration: none;
+    background: linear-gradient(120deg, #5d5fc4, 40%, #d68686c4 60%);
+    transition: all 2s ease;
+    color: rgba(0, 0, 0, 0.616);
+}
+
+#Acceuil .btn a:hover {
+    background: linear-gradient(120deg, #d68686c4, 40%, #5d5fc4 60%);
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.932);
+    padding: 20px 30px;
+}
+
+/* Annimation */
+#annimation {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.Annimer {
+    animation: annim 4s forwards;
+    opacity: 0;
+}
+
+@keyframes annim {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Partie appropo */
+.tous {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+#Apropos,
+#Contact {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#Apropos .img,
+#Apropos .text,
+#Contact .img,
+#Contact .formulaire {
+    overflow: hidden;
+    width: 85%;
+    margin-top: 20%;
+}
+
+#Apropos .img img,
+#Contact .img img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#Apropos .text {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#Apropos .text h1 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    width: 65%;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+#Apropos .text h1::first-letter {
+    font-size: 2.9rem;
+}
+
+#Apropos .text p {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+#Apropos .text p span {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+/* Nos service */
+
+#Service,
+.temoignage {
+    height: 100vh;
+    padding: 10px;
+}
+
+#Service .titre,
+#Temoignage .titre {
+    font-size: 3rem;
+    padding-bottom: 6px;
+    border-bottom: 2px solid black;
+    letter-spacing: 2px;
+    text-align: center;
+    display: inline-block;
+    margin: 80px 0 0 40%;
+}
+
+#Temoignage .titre {
+    font-size: 2rem;
+    margin: 90px 0 0 40%;
+}
+
+#Service .boite,
+#Temoignage .boite {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+#Service .conteneur {
+    border-radius: 6px;
+    box-shadow: 0px 1px 4px 2px #3b393987;
+    height: 55vh;
+    width: 79%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#Service .conteneur .Message {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Service .conteneur .Message .logo_service {
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px black dashed;
+}
+
+#Service .conteneur .top {
+    margin-top: 35px;
+}
+
+#Service .conteneur .Message .logo_service span {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+#Service .conteneur .Message .logo_service img {
+    width: 85px;
+}
+
+#Service .conteneur .Message .texte {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#Service .conteneur .Message .texte p {
+    letter-spacing: 2px;
+    padding: 5px;
+}
+
+#Service .conteneur .Message .texte p span {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Temoignage */
+.temoignage .box {
+    border-radius: 50px;
+    box-shadow: 0px 1px 4px 2px #3b393987;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    transition: all 2.5s ease-out;
+}
+
+.titre-text span {
+    color: #fc8200;
+    font-size: 1, 5em;
+    font-weight: 700px;
+}
+
+.temoignage {
+    background-image: url(./Sans\ titre-1.jpg);
+    background-size: cover;
+}
+
+.temoignage .contenue {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.temoignage .contenue .box {
+    width: 340px;
+    margin: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.temoignage .contenue .box .inbox {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.temoignage .contenue .box .inbox img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.temoignage .contenue .box .text {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.temoignage .contenue .box h3 {
+    color: orange;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 600;
+}
+/* Inscription */
+#inscription .form-box {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #f7f7f7;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#inscription .form-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inscription form {
+  width: 100%;
+}
+
+#inscription h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+#inscription .inputbox {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#inscription .inputbox input {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#inscription .inputbox input:focus {
+  border-color: #333;
+}
+
+#inscription .inputbox label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0 5px;
+  background: #f7f7f7;
+  color: #999;
+  transition: 0.3s;
+}
+
+#inscription .inputbox input:focus + label,
+#inscription .inputbox input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 5px;
+  font-size: 12px;
+  color: #333;
+}
+
+#inscription button {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#inscription button:hover {
+  background: #555;
+}
+
+#inscription .register {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#inscription .register p {
+  color: #333;
+}
+
+#inscription .register a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#inscription .register a:hover {
+  text-decoration: underline;
+}
+
+/* Contact */
+#Contact .formulaire {
+    box-shadow: 0px 1px 4px 2px #3b393987;
+    height: 75%;
+    line-height: 75%;
+    width: 70%;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.newheight {
+    height: 81% !important;
+    width: 80% !important;
+}
+
+#Contact .formulaire .noti {
+    background-color: rgba(184, 12, 12, 0.884);
+    height: 10%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    display: none;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.newnoti {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+#Contact .formulaire .noti p {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+#Contact .formulaire h3 {
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+#Contact .formulaire form {
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#Contact .formulaire form label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 7px 0;
+}
+
+#Contact .formulaire form label span {
+    color: red;
+    font-size: 1rem;
+}
+
+#Contact .formulaire form input {
+    width: 80%;
+    padding: 18px;
+    margin: 7px 0;
+    border-radius: 5px;
+
+}
+
+#Contact .formulaire form textarea {
+    border-radius: 10px;
+    resize: none;
+    padding: 10px;
+    width: 80%;
+}
+
+#Contact .formulaire form input[type="submit"] {
+    cursor: pointer;
+    margin: 15px 0;
+    font-size: 20px;
+    background-color: rgba(0, 128, 0, 0.479);
+    transition: all 2s ease;
+    color: rgba(0, 0, 0, 0.712);
+    padding: 10px;
+}
+
+#Contact .formulaire form input[type="submit"]:hover {
+    background-color: rgba(0, 128, 0, 0.897);
+    color: black;
+    padding: 17px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black; 
+    background-color: black;
+    cursor: pointer;
+    transition: all 2s ease;
+
+}
+
+.arrow-up:hover {
+    padding: 25px;
+}
+
+/* version phone */
+header .croix,
+.Menu_humburger,
+.bloc1 {
+    display: none;
+}
+
+@media all and (max-width: 767px) {
+
+    /* #Contact, */
+    .partie {
+        display: none;
+    }
+
+    header {
+        height: 100vh;
+        width: 100%;
+        background: fixed white;
+        backdrop-filter: blur(30px);
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        margin-left: -350px;
+        transition: all 1.3s ease;
+        z-index: -100;
+        opacity: 0;
+        padding-top: 100px;
+        overflow: hidden;
+    }
+
+    .new {
+        margin-left: 0;
+        opacity: 6;
+        z-index: 150;
+        background-color: white;
+    }
+
+    header .en_tete .logo img {
+        width: 200px;
+        cursor: pointer;
+    }
+
+    header .en_tete,
+    header .en_tete nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bloc1 {
+        display: block;
+        position: fixed;
+        top: 3%;
+        right: 10%;
+        z-index: 200;
+    }
+
+    .burger {
+        position: relative;
+        width: 40px;
+        height: 30px;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+    }
+
+    .burger input {
+        display: none;
+    }
+
+    .burger span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: black;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+
+    .burger span:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-50%);
+    }
+
+    .burger input:checked~span:nth-of-type(1) {
+        top: 0;
+        left: 5px;
+        transform: rotate(405deg);
+    }
+
+    .burger input:checked~span:nth-of-type(2) {
+        width: 0%;
+        opacity: 0;
+    }
+
+    .burger input:checked~span:nth-of-type(3) {
+        top: 28px;
+        left: 5px;
+        transform: rotate(-405deg);
+    }
+
+
+
+    /* texte */
+    #Acceuil #annimation,
+    #Acceuil #annimation .text,
+    #Acceuil #annimation .text2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Acceuil #annimation .text h1 {
+        font-size: 1.5rem;
+        font-style: normal;
+    }
+
+    #Acceuil #annimation h1::first-letter {
+        font-size: 2rem;
+    }
+
+    #Acceuil #annimation .text p,
+    #Acceuil #annimation .text2 {
+        text-align: center;
+        font-size: 0.9rem;
+        margin: 10px;
+        letter-spacing: 1px;
+    }
+
+    #Acceuil #annimation a {
+        padding: 10px 20px;
+    }
+
+    #Acceuil #annimation a:hover {
+        padding: 15px 20px;
+    }
+
+    /* Appropo */
+    #Apropos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto !important;
+    }
+
+    #Apropos .img {
+        overflow: none;
+        height: 110%;
+        border-radius: 20px;
+        box-shadow: -1px 4px 9px 4px rgba(0, 0, 0, 0.459);
+    }
+
+    #Apropos .text {
+        margin-top: 10% !important;
+    }
+
+    #Apropos .text h1 {
+        font-size: 1.3rem;
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    #Apropos .text h1::first-letter {
+        font-size: 1.5rem;
+    }
+
+    #Apropos .bloc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Apropos .bloc p {
+        border-radius: 6px;
+        box-shadow: 0px 1px 4px 2px #3b393987;
+        height: 55vh;
+        padding: 30px;
+        margin: 0px 5px 20px 5px;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        font-size: 0.9rem;
+    }
+
+    #Apropos .bloc p span {
+        color: rgba(255, 0, 0, 0.575);
+    }
+
+    /* Nos service */
+    #Service {
+        overflow: none;
+    }
+
+    #Service .titre,
+    #Temoignage .titre {
+        font-size: 2rem;
+        margin: 20px;
+    }
+
+    #Service,
+    #Service .boite {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #Service .boite .conteneur {
+        margin-bottom: 30px;
+        height: auto !important;
+        padding: 30px;
+        width: 86%;
+    }
+
+    #Temoignage {
+        overflow: hidden;
+        height: auto !important;
+    }
+
+    /* Contact */
+    #Contact {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    #Contact .img {
+        display: none;
+    }
+
+    #Contact .formulaire {
+        width: 90%;
+        height: auto !important;
+    }
+
+    #Contct .formulaire form {
+        padding: 10px;
+    }
+
+    .back-to-top {
+        right: 45px;
+        z-index: 5;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#Acceuil {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#Acceuil .en_tete {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+#Acceuil header .en_tete .logo,
+#Acceuil header .en_tete .lien {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#Acceuil header .en_tete .logo img {
+    width: 100px;
+    cursor: pointer;
+}
+
+#Acceuil header .en_tete nav {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+#Acceuil header .en_tete nav a {
+    text-decoration: none;
+    margin: 10px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.829);
+    padding: 5px;
+    transition: all 2s ease;
+}
+
+#Acceuil header .en_tete nav a:hover,
+#Acceuil header .en_tete .lien a:hover {
+    border-bottom: 1px solid black;
+}
+
+#Acceuil header .en_tete .lien a {
+    margin: 12px;
+    padding: 10px;
+    transition: all 2s ease;
+}
+
+#Acceuil header .en_tete .lien a img {
+    width: 30px;
+}
+
+/* text */
+#Acceuil .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Acceuil .text h1 {
+    cursor: pointer;
+    background: linear-gradient(120deg, #5d5fc4, 40%, #d68686c4 60%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-style: italic;
+    letter-spacing: 10px;
+    margin: 5px;
+}
+
+#Acceuil .text p,
+#Acceuil .text2 {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+#Acceuil .btn {
+    margin-top: 30px;
+}
+
+#Acceuil .btn a {
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    text-decoration: none;
+    background: linear-gradient(120deg, #5d5fc4, 40%, #d68686c4 60%);
+    transition: all 2s ease;
+    color: rgba(0, 0, 0, 0.616);
+}
+
+#Acceuil .btn a:hover {
+    background: linear-gradient(120deg, #d68686c4, 40%, #5d5fc4 60%);
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.932);
+    padding: 20px 30px;
+}
+
+/* Annimation */
+#annimation {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.Annimer {
+    animation: annim 4s forwards;
+    opacity: 0;
+}
+
+@keyframes annim {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Partie appropo */
+.tous {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+#Apropos,
+#Contact {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#Apropos .img,
+#Apropos .text,
+#Contact .img,
+#Contact .formulaire {
+    overflow: hidden;
+    width: 85%;
+    margin-top: 20%;
+}
+
+#Apropos .img img,
+#Contact .img img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#Apropos .text {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#Apropos .text h1 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    width: 65%;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+#Apropos .text h1::first-letter {
+    font-size: 2.9rem;
+}
+
+#Apropos .text p {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+#Apropos .text p span {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+/* Nos service */
+
+#Service,
+.temoignage {
+    height: 100vh;
+    padding: 10px;
+}
+
+#Service .titre,
+#Temoignage .titre {
+    font-size: 3rem;
+    padding-bottom: 6px;
+    border-bottom: 2px solid black;
+    letter-spacing: 2px;
+    text-align: center;
+    display: inline-block;
+    margin: 80px 0 0 40%;
+}
+
+#Temoignage .titre {
+    font-size: 2rem;
+    margin: 90px 0 0 40%;
+}
+
+#Service .boite,
+#Temoignage .boite {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+#Service .conteneur {
+    border-radius: 6px;
+    box-shadow: 0px 1px 4px 2px #3b393987;
+    height: 55vh;
+    width: 79%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#Service .conteneur .Message {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Service .conteneur .Message .logo_service {
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px black dashed;
+}
+
+#Service .conteneur .top {
+    margin-top: 35px;
+}
+
+#Service .conteneur .Message .logo_service span {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+#Service .conteneur .Message .logo_service img {
+    width: 85px;
+}
+
+#Service .conteneur .Message .texte {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#Service .conteneur .Message .texte p {
+    letter-spacing: 2px;
+    padding: 5px;
+}
+
+#Service .conteneur .Message .texte p span {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Temoignage */
+.temoignage .box {
+    border-radius: 50px;
+    box-shadow: 0px 1px 4px 2px #3b393987;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    transition: all 2.5s ease-out;
+}
+
+.titre-text span {
+    color: #fc8200;
+    font-size: 1, 5em;
+    font-weight: 700px;
+}
+
+.temoignage {
+    background-image: url(./Sans\ titre-1.jpg);
+    background-size: cover;
+}
+
+.temoignage .contenue {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.temoignage .contenue .box {
+    width: 340px;
+    margin: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.temoignage .contenue .box .inbox {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.temoignage .contenue .box .inbox img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.temoignage .contenue .box .text {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.temoignage .contenue .box h3 {
+    color: orange;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* Contact */
+#Contact .formulaire {
+    box-shadow: 0px 1px 4px 2px #3b393987;
+    height: 75%;
+    line-height: 75%;
+    width: 70%;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.newheight {
+    height: 81% !important;
+    width: 80% !important;
+}
+
+#Contact .formulaire .noti {
+    background-color: rgba(184, 12, 12, 0.884);
+    height: 10%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    display: none;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.newnoti {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+#Contact .formulaire .noti p {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+#Contact .formulaire h3 {
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+#Contact .formulaire form {
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#Contact .formulaire form label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 7px 0;
+}
+
+#Contact .formulaire form label span {
+    color: red;
+    font-size: 1rem;
+}
+
+#Contact .formulaire form input {
+    width: 80%;
+    padding: 18px;
+    margin: 7px 0;
+    border-radius: 5px;
+
+}
+
+#Contact .formulaire form textarea {
+    border-radius: 10px;
+    resize: none;
+    padding: 10px;
+    width: 80%;
+}
+
+#Contact .formulaire form input[type="submit"] {
+    cursor: pointer;
+    margin: 15px 0;
+    font-size: 20px;
+    background-color: rgba(0, 128, 0, 0.479);
+    transition: all 2s ease;
+    color: rgba(0, 0, 0, 0.712);
+    padding: 10px;
+}
+
+#Contact .formulaire form input[type="submit"]:hover {
+    background-color: rgba(0, 128, 0, 0.897);
+    color: black;
+    padding: 17px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black; 
+    background-color: black;
+    cursor: pointer;
+    transition: all 2s ease;
+
+}
+
+.arrow-up:hover {
+    padding: 25px;
+}
+
+/* version phone */
+header .croix,
+.Menu_humburger,
+.bloc1 {
+    display: none;
+}
+
+@media all and (max-width: 767px) {
+
+    /* #Contact, */
+    .partie {
+        display: none;
+    }
+
+    header {
+        height: 100vh;
+        width: 100%;
+        background: fixed white;
+        backdrop-filter: blur(30px);
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        margin-left: -350px;
+        transition: all 1.3s ease;
+        z-index: -100;
+        opacity: 0;
+        padding-top: 100px;
+        overflow: hidden;
+    }
+
+    .new {
+        margin-left: 0;
+        opacity: 6;
+        z-index: 150;
+        background-color: white;
+    }
+
+    header .en_tete .logo img {
+        width: 200px;
+        cursor: pointer;
+    }
+
+    header .en_tete,
+    header .en_tete nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bloc1 {
+        display: block;
+        position: fixed;
+        top: 3%;
+        right: 10%;
+        z-index: 200;
+    }
+
+    .burger {
+        position: relative;
+        width: 40px;
+        height: 30px;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+    }
+
+    .burger input {
+        display: none;
+    }
+
+    .burger span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: black;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+
+    .burger span:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+    }
+
+    .burger span:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-50%);
+    }
+
+    .burger input:checked~span:nth-of-type(1) {
+        top: 0;
+        left: 5px;
+        transform: rotate(405deg);
+    }
+
+    .burger input:checked~span:nth-of-type(2) {
+        width: 0%;
+        opacity: 0;
+    }
+
+    .burger input:checked~span:nth-of-type(3) {
+        top: 28px;
+        left: 5px;
+        transform: rotate(-405deg);
+    }
+
+
+
+    /* texte */
+    #Acceuil #annimation,
+    #Acceuil #annimation .text,
+    #Acceuil #annimation .text2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Acceuil #annimation .text h1 {
+        font-size: 1.5rem;
+        font-style: normal;
+    }
+
+    #Acceuil #annimation h1::first-letter {
+        font-size: 2rem;
+    }
+
+    #Acceuil #annimation .text p,
+    #Acceuil #annimation .text2 {
+        text-align: center;
+        font-size: 0.9rem;
+        margin: 10px;
+        letter-spacing: 1px;
+    }
+
+    #Acceuil #annimation a {
+        padding: 10px 20px;
+    }
+
+    #Acceuil #annimation a:hover {
+        padding: 15px 20px;
+    }
+
+    /* Appropo */
+    #Apropos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto !important;
+    }
+
+    #Apropos .img {
+        overflow: none;
+        height: 110%;
+        border-radius: 20px;
+        box-shadow: -1px 4px 9px 4px rgba(0, 0, 0, 0.459);
+    }
+
+    #Apropos .text {
+        margin-top: 10% !important;
+    }
+
+    #Apropos .text h1 {
+        font-size: 1.3rem;
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    #Apropos .text h1::first-letter {
+        font-size: 1.5rem;
+    }
+
+    #Apropos .bloc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Apropos .bloc p {
+        border-radius: 6px;
+        box-shadow: 0px 1px 4px 2px #3b393987;
+        height: 55vh;
+        padding: 30px;
+        margin: 0px 5px 20px 5px;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        font-size: 0.9rem;
+    }
+
+    #Apropos .bloc p span {
+        color: rgba(255, 0, 0, 0.575);
+    }
+
+    /* Nos service */
+    #Service {
+        overflow: none;
+    }
+
+    #Service .titre,
+    #Temoignage .titre {
+        font-size: 2rem;
+        margin: 20px;
+    }
+
+    #Service,
+    #Service .boite {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #Service .boite .conteneur {
+        margin-bottom: 30px;
+        height: auto !important;
+        padding: 30px;
+        width: 86%;
+    }
+
+    #Temoignage {
+        overflow: hidden;
+        height: auto !important;
+    }
+
+    /* Contact */
+    #Contact {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    #Contact .img {
+        display: none;
+    }
+
+    #Contact .formulaire {
+        width: 90%;
+        height: auto !important;
+    }
+
+    #Contct .formulaire form {
+        padding: 10px;
+    }
+
+    .back-to-top {
+        right: 45px;
+        z-index: 5;
+    }
+}
